@@ -251,12 +251,15 @@ let enumerable = { property : 1, method : () => {} };
 for (let key of Object.keys( enumerable )) console.log(key);
 > property
 > method
+
 for (let value of Object.values( enumerable )) console.log(value);
 > 1
 > () => {}
+
 for (let entry of Object.entries( enumerable )) console.log(entry);
 > (2) ["prop", 1]
 > (2) ["meth", ƒ()]
+
 This is also achievable by using a for…in loop instead without Object.*
 */
 
@@ -307,6 +310,7 @@ Console output:
 3
 4
 5
+
 A secondary condition can be tested within the loop. This makes it possible to break from the loop earlier if needed:
 
 while (condition_1) {

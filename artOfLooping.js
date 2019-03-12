@@ -136,8 +136,6 @@ for (var i = 0; i < json.jsonData.length; i++) {
 The While Loop has a condition specified in it. It checks the condition and executes the code block as long as the condition is true. Note that the while loop does not have a counter like the for loop.
 
 a. Looping through an HTML table element
-Suppose I have an HTML table that shows the prices of different products. This HTML table looks like the below image:
-
 
 Price Table without Products Total
 You can see that this table does not show the total price of all the products. So if there is a requirement for you to show the total price then you can loop through all the prices and show the total in the table footer. This is how you will do it.
@@ -264,7 +262,7 @@ var myVar = setInterval(myTimer, 1000);
 function myTimer() {
 // your code
 }
-Reference Tutorial — Understanding “setTimeout()” and “setInterval()” timer methods in jQuery/JavaScript
+
 4. The “Do While” loop
 In Do While loop the condition to be checked is given at the end, and so the loop executes at least once even if the condition is not true. Check the below code that will give a ‘Hello’ message on the alert box, even if the condition is false right from the beginning (as variable ‘i’ value is always greater than 1).
 
@@ -274,6 +272,7 @@ do {
     i++;
 }
 while (i < 1);
+
 a. Looping through XML
 Now I will use the Do While loop for how to loop through XML and extract data from it. I have an XML file called ‘XMLFile1.xml’ whose content is:
 
@@ -292,6 +291,9 @@ xhttp.onreadystatechange = function () {
         myFunction(this);
     }
 };
+
+//The XMLHttpRequest.responseXML read-only property returns a Document containing the HTML or XML retrieved by the request; or null if the request was unsuccessful, has not yet been sent, or if the data can't be parsed as XML or HTML.
+
 xhttp.open("GET", "XMLFile1.xml", true);
 xhttp.send();
 function myFunction(xml) {
@@ -328,7 +330,6 @@ do {
     i++;
 }
 while (i < cityNames.length);
-The below image illustrates the output printed on the console:
 
 
 Cities values from XML
@@ -347,5 +348,12 @@ Function1 is the name of the function which gets called for every element of the
 
 Note that you can convert an object to an array by using the Array.from() method:
 
-var linksArr = Array.from(links);
+var string = "01";
+const convertObj = Array.from(string);
+console.log(convertObj);
+
+// Array.from("01");
+// ['0', '1']
+
+output: (2) ["0", "1"]
 */
